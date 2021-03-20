@@ -72,6 +72,12 @@ const routes = [
         component: () =>
             import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Event.vue'),
     },
+    {
+        path: '/computed',
+        name: 'Computed',
+        component: () =>
+            import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Computed.vue'),
+    },
 ];
 
 const router = createRouter({
