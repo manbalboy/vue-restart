@@ -1,8 +1,16 @@
 <template>
     <div>
         <PageTitle :title="title"></PageTitle>
-        <ChildComponent :likes="likes" :isOk="isOk"></ChildComponent>
-        <ChildComponent :commentArray="[1, 2, 3, 4]" :author="{ test: 1 }"></ChildComponent>
+        <ChildComponent type="props" :likes="likes" :isOk="isOk"></ChildComponent>
+        <ChildComponent
+            type="props1"
+            :commentArray="[1, 2, 3, 4]"
+            :author="{ test: 1 }"
+        ></ChildComponent>
+        <br />
+        <br />
+        <button @click="callChild">부모에있는 클릭</button>
+        <ChildComponent type="event" ref="child_component"></ChildComponent>
     </div>
 </template>
 
@@ -20,6 +28,11 @@
         components: {
             PageTitle,
             ChildComponent,
+        },
+        methods: {
+            callChild() {
+                this.$refs.child_component.$refs.child_btn.click();
+            },
         },
     };
 </script>
