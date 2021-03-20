@@ -78,6 +78,12 @@ const routes = [
         component: () =>
             import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Computed.vue'),
     },
+    {
+        path: '/watch',
+        name: 'Watch',
+        component: () =>
+            import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Watch.vue'),
+    },
 ];
 
 const router = createRouter({
