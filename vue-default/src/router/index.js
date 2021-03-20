@@ -100,6 +100,22 @@ const routes = [
                 /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Basic/Watch.vue'
             ),
     },
+    {
+        path: '/search',
+        name: 'Search',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/BasicLastPage/Search.vue'
+            ),
+    },
+    {
+        path: '/save',
+        name: 'Save',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/BasicLastPage/Save.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
