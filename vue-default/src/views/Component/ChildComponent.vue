@@ -11,15 +11,23 @@
             <br />
             <br />
         </div>
-        <div v-else>
+        <div v-else-if="type == 'event'">
             <p>============자식 이벤트==============</p>
             <button @click="clickFn" ref="child_btn">자식에 있는 클릭</button>
+        </div>
+        <div v-else>
+            <button @click="sendFromChild">부모로 Msg 전달</button>
         </div>
     </div>
 </template>
 
 <script>
     export default {
+        data() {
+            return {
+                msg: '자식에서 있는 DATA',
+            };
+        },
         props: {
             type: {
                 type: String,
@@ -45,6 +53,9 @@
             },
             clickFn2() {
                 alert('부모에서 바로 접근한 메서드');
+            },
+            sendFromChild() {
+                this.$emit('sendFromChildData', { msg: this.msg });
             },
         },
     };
