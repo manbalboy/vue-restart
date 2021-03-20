@@ -1,5 +1,8 @@
 <template>
-    <div>{{ item }}</div>
+    <div>
+        <div>props :{{ item }}</div>
+        <div>inject :{{ itemArray }}</div>
+    </div>
 </template>
 
 <script>
@@ -9,6 +12,7 @@
                 type: Array,
             },
         },
+        inject: ['itemArray'],
     };
 </script>
 

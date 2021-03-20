@@ -15,6 +15,11 @@
         components: {
             ProvideInjectChild,
         },
+        provide() {
+            return {
+                itemArray: [...this.item, 3],
+            };
+        },
     };
 </script>
 
