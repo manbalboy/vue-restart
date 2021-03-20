@@ -132,6 +132,14 @@ const routes = [
                 /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Component/Example4.vue'
             ),
     },
+    {
+        path: '/slot',
+        name: 'SlotModalUse',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Slot/SlotModalUse.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
