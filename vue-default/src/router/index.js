@@ -116,6 +116,14 @@ const routes = [
                 /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/BasicLastPage/Save.vue'
             ),
     },
+    {
+        path: '/serverData',
+        name: 'ServerData',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/ApiCall/ServerData.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
