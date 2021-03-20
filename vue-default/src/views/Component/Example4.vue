@@ -1,5 +1,5 @@
 <template>
-    <PageTitle title="ff"></PageTitle>
+    <PageTitle :title="title"></PageTitle>
 </template>
 
 <script>
