@@ -1,7 +1,9 @@
 <template>
-    <PageTitle :title="title"></PageTitle>
-    <ChildComponent :likes="likes" :isOk="isOk"></ChildComponent>
-    <ChildComponent :commentArray="[1, 2, 3, 4]" :author="{ test: 1 }"></ChildComponent>
+    <div>
+        <PageTitle :title="title"></PageTitle>
+        <ChildComponent :likes="likes" :isOk="isOk"></ChildComponent>
+        <ChildComponent :commentArray="[1, 2, 3, 4]" :author="{ test: 1 }"></ChildComponent>
+    </div>
 </template>
 
 <script>
