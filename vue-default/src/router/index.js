@@ -52,6 +52,14 @@ const routes = [
         component: () =>
             import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Example3.vue'),
     },
+    {
+        path: '/listRender',
+        name: 'ListRender',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/ListRender.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
