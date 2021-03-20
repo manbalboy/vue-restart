@@ -1,9 +1,22 @@
 <template>
-    <h1>페이지타이틀입니다.</h1>
+    <h1 class="page-title">{{ title }}</h1>
 </template>
 
 <script>
-    export default {};
+    export default {
+        props: {
+            title: {
+                type: String,
+                default: '타이틀입니다.',
+            },
+        },
+    };
 </script>
 
-<style></style>
+<style scoped>
+    .page-title {
+        padding-left: 5px;
+        border-left: 3px solid red;
+        text-align: left;
+    }
+</style>

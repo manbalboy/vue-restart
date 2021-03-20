@@ -1,10 +1,15 @@
 <template>
-    <PageTitle></PageTitle>
+    <PageTitle title="ff"></PageTitle>
 </template>
 
 <script>
     import PageTitle from '../../components/PageTitle.vue';
     export default {
+        data() {
+            return {
+                title: '컴포넌트 타이틀',
+            };
+        },
         components: {
             PageTitle,
         },
