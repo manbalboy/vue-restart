@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
-import Basic from '../views/Basic.vue';
-import DataBindingHtml from '../views/DataBindingHtml.vue';
+import Basic from '../views/Basic/Basic.vue';
+import DataBindingHtml from '../views/Basic/DataBindingHtml.vue';
 
 const routes = [
     {
@@ -32,57 +32,73 @@ const routes = [
         path: '/contact',
         name: 'Contact',
         component: () =>
-            import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Contact.vue'),
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Basic/Contact.vue'
+            ),
     },
     {
         path: '/example',
         name: 'Example',
         component: () =>
-            import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Example.vue'),
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Basic/Example.vue'
+            ),
     },
     {
         path: '/example2',
         name: 'Example2',
         component: () =>
-            import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Example2.vue'),
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Basic/Example2.vue'
+            ),
     },
     {
         path: '/example3',
         name: 'Example3',
         component: () =>
-            import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Example3.vue'),
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Basic/Example3.vue'
+            ),
     },
     {
         path: '/listRender',
         name: 'ListRender',
         component: () =>
             import(
-                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/ListRender.vue'
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Basic/ListRender.vue'
             ),
     },
     {
         path: '/render',
         name: 'Render',
         component: () =>
-            import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Render.vue'),
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Basic/Render.vue'
+            ),
     },
     {
         path: '/event',
         name: 'Event',
         component: () =>
-            import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Event.vue'),
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Basic/Event.vue'
+            ),
     },
     {
         path: '/computed',
         name: 'Computed',
         component: () =>
-            import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Computed.vue'),
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Basic/Computed.vue'
+            ),
     },
     {
         path: '/watch',
         name: 'Watch',
         component: () =>
-            import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Watch.vue'),
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Basic/Watch.vue'
+            ),
     },
 ];
 
