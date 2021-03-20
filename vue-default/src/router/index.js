@@ -46,6 +46,12 @@ const routes = [
         component: () =>
             import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Example2.vue'),
     },
+    {
+        path: '/example3',
+        name: 'Example3',
+        component: () =>
+            import(/* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Example3.vue'),
+    },
 ];
 
 const router = createRouter({
