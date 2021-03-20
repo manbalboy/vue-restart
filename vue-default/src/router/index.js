@@ -124,6 +124,14 @@ const routes = [
                 /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/ApiCall/ServerData.vue'
             ),
     },
+    {
+        path: '/example4',
+        name: 'Example4',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Component/Example4.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
