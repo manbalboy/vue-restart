@@ -22,7 +22,7 @@
         methods: {
             saveButton() {
                 if (!this.name.length) {
-                    return alert('이름을 입력');
+                    return this.$swal('사용자이름을 입력 ');
                 }
 
                 if (this.age == '0' || this.age == '') {
