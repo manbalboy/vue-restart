@@ -1,16 +1,13 @@
 <template>
     <div>
         <PageTitle :title="title"></PageTitle>
-        <ChildComponent type="props" :likes="likes" :isOk="isOk"></ChildComponent>
-        <ChildComponent
-            type="props1"
-            :commentArray="[1, 2, 3, 4]"
-            :author="{ test: 1 }"
-        ></ChildComponent>
+        <ChildComponent type="props" :likes="likes" :isOk="isOk" />
+        <ChildComponent type="props1" :commentArray="[1, 2, 3, 4]" :author="{ test: 1 }" />
         <br />
         <br />
-        <button @click="callChild">부모에있는 클릭</button>
-        <ChildComponent type="event" ref="child_component"></ChildComponent>
+        <button @click="callChildMethod">자식에 있는 메서드 바로 클릭</button>
+        <button @click="callChild">자식에 있는 버튼 클릭 접근</button>
+        <ChildComponent type="event" ref="child_component" />
     </div>
 </template>
 
@@ -32,6 +29,9 @@
         methods: {
             callChild() {
                 this.$refs.child_component.$refs.child_btn.click();
+            },
+            callChildMethod() {
+                this.$refs.child_component.clickFn2();
             },
         },
     };

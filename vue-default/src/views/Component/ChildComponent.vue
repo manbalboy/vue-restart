@@ -43,6 +43,9 @@
             clickFn() {
                 alert('부모에서 발생시킨 이벤트');
             },
+            clickFn2() {
+                alert('부모에서 바로 접근한 메서드');
+            },
         },
     };
 </script>
