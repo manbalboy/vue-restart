@@ -140,6 +140,14 @@ const routes = [
                 /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Slot/SlotModalUse.vue'
             ),
     },
+    {
+        path: '/provide',
+        name: 'ProvideInject',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Provide/ProvideInject.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
