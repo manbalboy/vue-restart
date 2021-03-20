@@ -15,8 +15,12 @@
             <p>============자식 이벤트==============</p>
             <button @click="clickFn" ref="child_btn">자식에 있는 클릭</button>
         </div>
-        <div v-else>
+        <div v-else-if="type == 'event2'">
             <button @click="sendFromChild">부모로 Msg 전달</button>
+        </div>
+
+        <div v-else>
+            <button @click="changeData">data변경</button>
         </div>
     </div>
 </template>
@@ -26,6 +30,7 @@
         data() {
             return {
                 msg: '자식에서 있는 DATA',
+                msga: '자식에서 있는 DATA',
             };
         },
         props: {
@@ -56,6 +61,9 @@
             },
             sendFromChild() {
                 this.$emit('sendFromChildData', { msg: this.msg });
+            },
+            changeData() {
+                this.msg = '변경변경 변경되었음';
             },
         },
     };

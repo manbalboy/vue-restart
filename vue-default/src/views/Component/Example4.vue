@@ -14,6 +14,11 @@
         <p>============ 자식컴포넌트로부터 받는 이벤트 ==================</p>
         <ChildComponent type="event2" @sendFromChildData="sendMsg" />
         <p>{{ msg }}</p>
+
+        <p>============ 자식컴포넌트와 부모컴포넌트 DATA 동기화 ==================</p>
+        <ChildComponent type="sync" ref="childComp" />
+        <button @click="ok">확인</button>
+        <!-- <p>{{ syncMsg }}</p> -->
     </div>
 </template>
 
@@ -27,7 +32,13 @@
                 likes: 23111,
                 isOk: false,
                 msg: '',
+                msg2: '',
             };
+        },
+        computed: {
+            syncMsg() {
+                return this.$refs.childComp.msg;
+            },
         },
         components: {
             PageTitle,
@@ -42,6 +53,9 @@
             },
             sendMsg({ msg }) {
                 this.msg = msg;
+            },
+            ok() {
+                alert(this.syncMsg);
             },
         },
     };

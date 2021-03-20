@@ -42,6 +42,7 @@
       "parser": "babel-eslint"
     },
     "rules": {
+      "no-debugger" : "off",
       "prettier/prettier": [
         "error",
         {
