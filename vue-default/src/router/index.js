@@ -148,6 +148,14 @@ const routes = [
                 /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Provide/ProvideInject.vue'
             ),
     },
+    {
+        path: '/mixin',
+        name: 'MixinTest',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Mixin/MixinTest.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
