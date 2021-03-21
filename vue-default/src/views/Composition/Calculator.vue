@@ -1,0 +1,31 @@
+<template>
+    <div>
+        <h2>Calculator</h2>
+        <div>
+            <input type="text" v-model.number="num" @keyup="plusNumbers" />
+            <span> + </span>
+            <input type="text" v-model.number="num2" @keyup="plusNumbers" />
+            <span> = </span>
+            <span>{{ result }}</span>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                num: 0,
+                num2: 0,
+                result: 0,
+            };
+        },
+        methods: {
+            plusNumbers() {
+                this.result = this.num + this.num2;
+            },
+        },
+    };
+</script>
+
+<style></style>

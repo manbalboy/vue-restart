@@ -172,6 +172,22 @@ const routes = [
                 /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Plugins/Plugins.vue'
             ),
     },
+    {
+        path: '/calcul',
+        name: 'Calculator',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Composition/Calculator.vue'
+            ),
+    },
+    {
+        path: '/composition',
+        name: 'Composition',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Composition/Composition.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
