@@ -30,3 +30,5 @@ app.directive('focus', {
 });
 
 app.mount('#app');
+
+window.Kakao.init('3a40b943b41d3804cfa9e09a49b50ef2'); //발급받은 앱키

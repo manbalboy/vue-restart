@@ -228,6 +228,14 @@ const routes = [
                 /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Store/StoreAccess.vue'
             ),
     },
+    {
+        path: '/kakaologin',
+        name: 'KaKaoLogin',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Login/KaKaoLogin.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
