@@ -1,13 +1,16 @@
 <template>
-    <input type="text" v-focus />
+    <div>
+        <input type="text" v-focus />
+        <input type="text" v-innerFocus />
+    </div>
 </template>
 
 <script>
     export default {
         directives: {
-            focus: {
+            innerFocus: {
                 mounted(el) {
-                    el.focus();
+                    el.value = 'zzz';
                 },
             },
         },

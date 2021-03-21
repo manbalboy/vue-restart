@@ -5,4 +5,14 @@ import VueSweetalert2 from 'vue-sweetalert2';
 import mixin from './mixin.js';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
-createApp(App).use(router).use(VueSweetalert2).mixin(mixin).mount('#app');
+const app = createApp(App);
+app.use(router);
+app.use(VueSweetalert2);
+app.mixin(mixin);
+app.directive('focus', {
+    mounted(el) {
+        el.focus();
+    },
+});
+
+app.mount('#app');
