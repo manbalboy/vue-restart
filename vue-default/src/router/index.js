@@ -244,6 +244,14 @@ const routes = [
                 /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Login/NaverLogin.vue'
             ),
     },
+    {
+        path: '/googlelogin',
+        name: 'Googlelogin',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Login/Googlelogin.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
