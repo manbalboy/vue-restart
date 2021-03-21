@@ -164,6 +164,14 @@ const routes = [
                 /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/CustomDirectives/CustomDirective.vue'
             ),
     },
+    {
+        path: '/plugin',
+        name: 'Plugins',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Plugins/Plugins.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
