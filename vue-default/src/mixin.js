@@ -1,11 +1,8 @@
 import axios from 'axios';
 
 export default {
-    mounted() {
-        console.log('mixin mounted');
-    },
     methods: {
-        async $callAPI(url, method, data) {
+        async $API(url, method, data) {
             return (
                 await axios({
                     method,

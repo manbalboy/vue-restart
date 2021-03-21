@@ -38,9 +38,12 @@
             };
         },
         mixins: [ApiMixin],
+        mounted() {
+            console.log('vue 컴포넌트 마운티드');
+        },
         methods: {
             async getProductList() {
-                this.productList = await this.$callAPI(
+                this.productList = await this.$API(
                     'https://13f378ba-d0a2-456d-b5ba-22e646981d07.mock.pstmn.io/productList',
                     'GET',
                     '',
