@@ -188,6 +188,22 @@ const routes = [
                 /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Composition/Composition.vue'
             ),
     },
+    {
+        path: '/composition2',
+        name: 'Composition2',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Composition/Composition2.vue'
+            ),
+    },
+    {
+        path: '/composition3',
+        name: 'Composition3',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Composition/Composition3.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
