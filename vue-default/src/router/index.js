@@ -236,6 +236,14 @@ const routes = [
                 /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Login/KaKaoLogin.vue'
             ),
     },
+    {
+        path: '/naverlogin',
+        name: 'NaverLogin',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Login/NaverLogin.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
