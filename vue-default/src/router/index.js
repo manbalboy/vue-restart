@@ -220,6 +220,14 @@ const routes = [
                 /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Composition/CompositionProvide.vue'
             ),
     },
+    {
+        path: '/vuex',
+        name: 'StoreAccess',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Store/StoreAccess.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
