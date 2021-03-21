@@ -156,6 +156,14 @@ const routes = [
                 /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/Mixin/MixinTest.vue'
             ),
     },
+    {
+        path: '/directive',
+        name: 'CustomDirective',
+        component: () =>
+            import(
+                /* webpackChunkName: "contact" , webpackPrefetch:true*/ '../views/CustomDirectives/CustomDirective.vue'
+            ),
+    },
 ];
 
 const router = createRouter({
