@@ -48,9 +48,7 @@
                         const kakao_account = res.kakao_account;
                         const nicname = kakao_account.profile.nickname;
                         const email = kakao_account.email;
-                        console.log('nicname', nicname);
-                        console.log('email', email);
-                        console.log('kakao_account', kakao_account);
+                        this.$store.commit('setUser', { nicname, email });
                     },
                 });
             },
